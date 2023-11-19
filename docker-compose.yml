@@ -3,6 +3,19 @@ services:
   go-backend:
     build: go-backend
     volumes:
-      - /mnt/F/dev/golang/source/go-backend:/source/go-backend
+      - /home/shaopeng/docker-src/golang-docker/go-backend:/source/go-backend
     ports:
       - "80:80"
+    networks:
+      - app-network
+
+  redis:
+    image: 'redislabs/redismod'
+    ports:
+      - '6379:6379'
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
