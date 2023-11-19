@@ -3,4 +3,6 @@ services:
   go-backend:
     build: go-backend
     volumes:
-      - /mnt/F/dev/golang/source/go-backend
+      - /mnt/F/dev/golang/source/go-backend:/source/go-backend
+    ports:
+      - "80:80"
