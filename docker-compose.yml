@@ -3,4 +3,4 @@ services:
   go-backend:
     build: go-backend
     volumes:
-      - /Users/zhangshaopeng/data/source/golang/golang-docker/go-backend:/source/go-backend
+      - /mnt/F/dev/golang/source/go-backend
