@@ -16,3 +16,5 @@ this is a test project,build develop env for golang in docker
 因为go主要作为开发环境，涉及到文件的更新，所以在yml文件中建立了本地目录和docker路径之间的映射。
 
 因为docker是监听了http端口80，所以建立docker和主机之间的端口映射
+
+增加了redis镜像，因为go-backend镜像需要访问redis，所以在配置了networks，这样go-backend里就可以用 “service:port”的方式来访问其他容器了。
